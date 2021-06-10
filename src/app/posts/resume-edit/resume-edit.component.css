@@ -1,0 +1,52 @@
+.heading {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.image {
+  margin-bottom: 1rem;
+}
+
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  height: 100%;
+}
+
+
+
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+} 
+
+

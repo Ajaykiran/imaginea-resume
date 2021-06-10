@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" (submit)="onSavePost()" *ngIf="!isLoading">
+
+    <div class="heading">Candidate Updation Form</div>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="filename" placeholder="file Name">
+      <mat-error *ngIf="form.get('filename').invalid">Please enter a resume file Name.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="name" placeholder="Candidate Name">
+      <mat-error *ngIf="form.get('name').invalid">Please enter a candidate name.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="email" placeholder="Candidate Email ID">
+      <mat-error *ngIf="form.get('email').invalid">Please enter a candidate email.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="phonenumber" placeholder="Candidate Contact Number">
+      <mat-error *ngIf="form.get('phonenumber').invalid">Please enter a candidate contact number.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="linkedin" placeholder="Candidate Linked-In profile">
+      <mat-error *ngIf="form.get('linkedin').invalid">Please enter a candidate LinkedIn ID.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput rows="4" formControlName="education" placeholder="Education Details"></textarea>
+      <mat-error *ngIf="form.get('education').invalid">Please enter a Candidate Education.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput rows="4" formControlName="skills" placeholder="Skills"></textarea>
+      <mat-error *ngIf="form.get('skills').invalid">Please enter a Candidate Skills.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="languages" placeholder="Candidate known languages">
+      <mat-error *ngIf="form.get('languages').invalid">Please enter a candidate known languages.</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit">Update Data</button>
+  </form>
+</mat-card>

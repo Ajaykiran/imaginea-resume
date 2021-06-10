@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form [formGroup]="form" (submit)="onSaveResume()" *ngIf="!isLoading">
+
+        <div class="heading">Add Resume Form</div>
+
+        <div class="image">
+            <button mat-stroked-button type="button" (click)="filePicker.click()">Add Resume</button>
+
+            <input type="file" #filePicker (change)="onImagePicked($event)"
+                accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+
+        </div>
+
+        <button mat-raised-button color="accent" type="submit">Save Resume</button>
+    </form>
+</mat-card>
